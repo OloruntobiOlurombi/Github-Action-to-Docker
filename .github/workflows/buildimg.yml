@@ -58,6 +58,9 @@ jobs:
           aws-region: ${{ secrets.REGION}}   
           # - run: aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/n9x0f3u3
 
+      - name: Code Checkout
+        uses: actions/checkout@v4
+          
       - name: Build Image
         run: |
           docker build -t react_pub .
