@@ -38,6 +38,6 @@ jobs:
       - name: Login into AWS
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          access_key: ${{ secrets.ACCESS_KEY }}
-          secret_key: ${{ secrets.SECRET_ACCESS_KEY }}
-          region: ${{ secrets.REGION }}
+          aws-access-key-id: ${{ secrets.ACCESS_KEY}}
+          aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.REGION}}
