@@ -53,7 +53,8 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
         with:
           mask-password: true 
-          registry-type: public   
+          registry-type: public
+          aws-region: ${{ secrets.REGION}}   
           # - run: aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/n9x0f3u3
 
       - name: Build Image
