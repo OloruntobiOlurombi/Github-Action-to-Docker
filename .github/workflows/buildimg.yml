@@ -1,13 +1,14 @@
-name: Build Docker Images 
+name: Build Docker Image 
 
-on: workflow_dispatch
+on: push  
+  #on: workflow_dispatch
 
 jobs:
   expressions:
     runs-on: ubuntu-latest 
     steps: 
       - name: Get Expressions 
-        run: echo $(github.com)  
+        run: github.com  
   build:
     runs-on: ubuntu-latest 
     steps:
