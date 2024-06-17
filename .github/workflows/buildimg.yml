@@ -29,6 +29,7 @@ jobs:
           docker push oloruntobi/node-docker-appimg:v3
 
   build-to-AWSECR:
+    needs: build-to-Dhub
     runs-on: ubuntu-latest 
     steps:
 
