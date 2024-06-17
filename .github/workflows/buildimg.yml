@@ -9,7 +9,7 @@ jobs:
   #  steps: 
   #    - name: Get Expressions 
   #      run: github.com  
-  build:
+  build-to-Dhub:
     runs-on: ubuntu-latest 
     steps:
 
@@ -27,3 +27,17 @@ jobs:
           docker build -t node-docker-appimg:v3 .
           docker tag node-docker-appimg:v3 oloruntobi/node-docker-appimg:v3
           docker push oloruntobi/node-docker-appimg:v3
+
+  build-to-AWSECR:
+    runs-on: ubuntu-latest 
+    steps:
+
+      - name: Code Checkout
+        uses: actions/checkout@v4 
+        
+      - name: Login into AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          access_key: ${{ secrets.ACCESS_KEY }}
+          secret_key: ${{ secrets.SECRET_ACCESS_KEY }}
+          region: ${{ secrets.REGION }}
