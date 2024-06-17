@@ -24,6 +24,6 @@ jobs:
 
       - name: Build Image 
         run: |
-          docker build -t node-docker-appImg:v3 .
-          docker tag node-docker-appImg:v3 oloruntobi/node-docker-appimg:v3
+          docker build -t node-docker-appimg:v3 .
+          docker tag node-docker-appimg:v3 oloruntobi/node-docker-appimg:v3
           docker push oloruntobi/node-docker-appimg:v3
