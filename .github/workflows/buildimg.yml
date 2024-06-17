@@ -26,4 +26,4 @@ jobs:
         run: |
           docker build -t node-docker-appImg:v3 .
           docker tag node-docker-appImg:v3 oloruntobi/node-docker-appImg:v3
-          docker push oloruntobi/node-docker-appImg:v3
+          docker push oloruntobi/node-docker-appimg:v3
