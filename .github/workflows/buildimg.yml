@@ -4,11 +4,11 @@ on: push
   #on: workflow_dispatch
 
 jobs:
-  expressions:
-    runs-on: ubuntu-latest 
-    steps: 
-      - name: Get Expressions 
-        run: github.com  
+  #expressions:
+  #  runs-on: ubuntu-latest 
+  #  steps: 
+  #    - name: Get Expressions 
+  #      run: github.com  
   build:
     runs-on: ubuntu-latest 
     steps:
